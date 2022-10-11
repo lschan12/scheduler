@@ -41,21 +41,19 @@ export const getInterview = (state, interview) => {
 }
 
 export const updateSpots = (state, appointments) => {
-  const days = state.days;
-  const day = days.filter(day => day.name === state.day)[0];
-  const apps = day.appointments;
-  let spots = apps.length;
+  const dayObj = state.days.find(day => day.name === state.day);
 
-  apps.forEach(id => {
-    if (appointments[id].interview) {
-      spots--;
+  let spots = 0;
+  for (let id of dayObj.appointments) {
+    const appointment = appointments[id];
+    if (!appointment.interview) {
+      spots ++;
     }
-  });
-  const updatedDay = { ...day, spots };
+  }
 
-  let updatedDays = [...days].map((item) => {
-    if (item.name === day.name) return updatedDay;
-    return item;
-  });
-  return updatedDays;
+  const day = {...dayObj, spots};
+  const days = state.days.map(d => d.name === state.day ? day : d);
+
+
+  return days;
 };
