@@ -120,6 +120,3 @@ export default {
     }
   })
 }
-
-
-// export default mockAxios;
