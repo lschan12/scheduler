@@ -6,14 +6,15 @@ export default function Form(props) {
   const [student, setStudent] = useState(props.student || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
-  // const reset = () => {
-  //   setStudent("");
-  //   setInterviewer(null);
-  // }
-  // const cancel = () => {
-  //   reset();
-  //   props.onCancel();
-  // }
+  const reset = () => {
+    setStudent("");
+    setInterviewer(null);
+    setError("")
+  }
+  const cancel = () => {
+    reset();
+    props.onCancel();
+  }
 
   const validate = () => {
     if (student === "") {
@@ -50,7 +51,7 @@ export default function Form(props) {
       </section>
       <section className="appointment__card-right">
         <section className="appointment__actions">
-          <Button danger onClick={() => props.onCancel()}>
+          <Button danger onClick={() => cancel()}>
             Cancel
           </Button>
           <Button confirm onClick={() => validate()}>
