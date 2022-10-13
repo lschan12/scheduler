@@ -5,13 +5,13 @@ It utilizes React, Axios, Webpack, Babel and SASS for the application, Storybook
 
 ## Final Product
 
-!["Confirmation Screen"](https://github.com/lschan12/scheduler/blob/master/docs/Confirm.png?raw=true)
 !["Slot Showing Edit and Delete When Hovered"](https://github.com/lschan12/scheduler/blob/master/docs/Edit-Delete.png?raw=true)
-!["Error Messages"](https://github.com/lschan12/scheduler/blob/master/docs/Error.png?raw=true)
-!["Interview Booking Form"](https://github.com/lschan12/scheduler/blob/master/docs/Form.png?raw=true)
 !["Day List Showing Spots Remaining with specific CSS Styling"](https://github.com/lschan12/scheduler/blob/master/docs/Full-Selected.png?raw=true)
-!["Status Messages When Performing Async Calls"](https://github.com/lschan12/scheduler/blob/master/docs/Status.png?raw=true)
+!["Interview Booking Form"](https://github.com/lschan12/scheduler/blob/master/docs/Form.png?raw=true)
 !["Form Validation Showing the Relevant Error Message"](https://github.com/lschan12/scheduler/blob/master/docs/Validation.png?raw=true)
+!["Error Messages"](https://github.com/lschan12/scheduler/blob/master/docs/Error.png?raw=true)
+!["Status Messages When Performing Async Calls"](https://github.com/lschan12/scheduler/blob/master/docs/Status.png?raw=true)
+!["Confirmation Screen"](https://github.com/lschan12/scheduler/blob/master/docs/Confirm.png?raw=true)
 
 ## Dependencies
 
