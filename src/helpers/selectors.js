@@ -1,3 +1,5 @@
+// Loops through state.days array to find the day matching the day param
+// if there are appointments, then push to new result array to not mutate state.days
 export const getAppointmentsForDay = (state, day) => {
   let result = [];
   let appArr;

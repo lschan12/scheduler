@@ -3,6 +3,8 @@ import Axios from "axios";
 import { updateSpots } from "helpers/selectors";
 
 export const useApplicationData = () => {
+
+  // useReducer to set state for day, days, appointments, and interviewers
   const SET_DAY = "SET_DAY";
   const SET_DAYS = "SET_DAYS";
   const SET_APPLICATION_DATA = "SET_APPLICATION_DATA";
@@ -38,6 +40,7 @@ export const useApplicationData = () => {
     })
   }
 
+  // Axios calls to database api, and sets state using useReducer dispatch
   useEffect(() => {
     Promise.all([
       Axios.get("/api/days"),
@@ -53,6 +56,8 @@ export const useApplicationData = () => {
     })
   }, [])
   
+  // Axios call to database api to store new appointment information
+  // used when a customer creates or edits and appointment
   const bookInterview = (id, interview) => {
     const appointment = {
       ...state.appointments[id],
@@ -73,6 +78,7 @@ export const useApplicationData = () => {
     }))
   };
 
+  // used when a user deletes an appointment 
   const cancelInterview = (id) => {
     const appointment = {
       ...state.appointments[id],

@@ -3,6 +3,8 @@ import classNames from "classnames";
 import "components/InterviewerListItem.scss"
 
 export default function InterviewerListItem (props) {
+  
+  // classNames to append selected and selected-image class if props.selected is truthy
   const className = classNames("interviewers__item", {
     "interviewers__item--selected": props.selected
   });

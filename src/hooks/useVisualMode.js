@@ -1,5 +1,10 @@
 import { useState } from "react";
 
+// sets an initialState as mode in an array, then adds more 
+// modes to the array as the user navigates between different elements 
+// transistion function adds a new mode to the array or replace if needed
+// back function goes back a mode and remove the most recent one
+
 const useVisualMode = (initialState) => {
   const [history, setHistory] = useState([initialState]);
 

@@ -6,9 +6,7 @@ import Appointment from "./Appointment";
 import { getAppointmentsForDay, getInterviewersForDay, getInterview } from "helpers/selectors";
 import { useApplicationData } from "hooks/useApplicationData";
 
-
-
-export default function Application(props) {
+export default function Application() {
   const {
     state,
     setDay,
@@ -16,8 +14,15 @@ export default function Application(props) {
     cancelInterview
   } = useApplicationData();
 
+  // getAppointmentsForDay function returns the appointments array based on the state.day
   const dailyAppointments = getAppointmentsForDay(state, state.day)
+
+  // getInterviewersForDay returns the interviewers array based on the state.day
   const interviewers = getInterviewersForDay(state, state.day)
+
+  // Map through appointments array, turn the interview number to an object,
+  // and render the Appointment components for the day
+  
   const schedule = dailyAppointments.map(app => {
     const interview = getInterview(state, app.interview)
     return <Appointment 
