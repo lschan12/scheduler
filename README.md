@@ -44,4 +44,6 @@ npm run storybook
 - Realtime experience with elements dynamically updating as the user interacts with the page
 - Form validation when forms do not have required inputs
 - Database updating with Axios calls when the user books, cancels, or edits and appointment
-- 
+- Components built using Storybook
+- Unit and integration testing with Jest, End-to-end testing with Cypress
+
